@@ -1,4 +1,10 @@
-<hello name="{{ name }}"></hello>
+<button (click)= 'showCreateForm = !showCreateForm'>Create </button>
+<div *ngIf="showCreateForm" > </div>
+<div  *ngFor="let customer of customers">
+<hello name="{{ customer.name }}"></hello>
+
+<h5>Id: {{customer.id}} <button (click)="destroy(customer.id)">x</button></h5>
 <p>
   Start editing to see some magic happen :)
 </p>
+</div>

@@ -6,5 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular';
+  showCreateForm = TextTrackCue;
+  customers = [{
+    name : 'Thien',
+    id : 1,
+  },
+  {
+     name : 'Thien1',
+    id : 2,
+  },
+    {
+     name : 'Thien1',
+    id : 3,
+  },
+  ]
+  add(){
+    
+  }
+  destroy(id){
+    this.customers.splice(id - 1,1);
+  }
 }
